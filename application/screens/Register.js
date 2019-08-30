@@ -10,6 +10,8 @@ const Form = t.form.Form;
 import FormValidation from '../utils/validation';
 
 import * as firebase from 'firebase';
+import moment from "moment";
+import {ScrollView} from "react-navigation";
 
 export default class Register extends Component {
 	constructor () {
@@ -26,27 +28,52 @@ export default class Register extends Component {
 		this.user = t.struct({
 			email: FormValidation.email,
 			password: FormValidation.password,
-			password_confirmation: this.samePassword
+			password_confirmation: this.samePassword,
+			fechaNacimiento: t.Date,
+			profesion: t.String,
+			direccion: t.String
 		});
+		let myFormatFunction = (format,date) =>{
+			return moment(date).format(format);
+		}
 
 		this.options = {
 			fields: {
 				email: {
-					help: 'Introduce un email',
+					placeholder: 'Introduce un email',
 					error: 'Email incorrecto',
 					autoCapitalize: 'none',
 				},
 				password: {
-					help: 'Introduce un password',
+					placeholder: 'Introduce un password',
 					error: 'Password incorrecto',
 					password: true,
 					secureTextEntry: true,
 				},
 				password_confirmation: {
-					help: 'Repite el password',
+					placeholder: 'Repite el password',
 					error: 'Los passwords no coinciden',
 					password: true,
 					secureTextEntry: true,
+				},
+				fechaNacimiento: {
+					label: 'Fecha Nacimiento',
+					placeholder: 'Ingresa tu fecha Nacimiento',
+					mode: 'date',
+					config:{
+						format:(date) => myFormatFunction("DD MMM YYYY",date)
+
+					}
+				},
+				profesion:{
+					label: 'Profesion',
+					placeholder:'Ingresa tu profesion',
+					autoCapitalize:'sentences'
+				},
+				direccion: {
+					label: 'Direccion',
+					placeholder: 'Ingresa tu direccion',
+					autoCapitalize:'sentences'
 				}
 			}
 		};
@@ -56,15 +83,30 @@ export default class Register extends Component {
 
 	register () {
 		if(this.validate) {
+			this.save();
 			firebase.auth().createUserWithEmailAndPassword(
 				this.validate.email, this.validate.password
 			)
+
 				.then(() => {
-					Toast.showWithGravity('Registro correcto, bienvenido', Toast.LONG, Toast.BOTTOM);
+
+
 				})
 				.catch (err => {
 					Toast.showWithGravity(err.message, Toast.LONG, Toast.BOTTOM);
 				})
+		}
+	}
+	save () {
+		const validate = this.refs.form.getValue();
+		if(validate) {
+			let data = {};
+			const key = firebase.database().ref().child('usuarios').push().key;
+			data[`usuarios/${key}`] = this.state.user;
+			firebase.database().ref().update(data).then(() => {
+				Toast.showWithGravity('usuario Registrado', Toast.LONG, Toast.BOTTOM);
+
+			});
 		}
 	}
 
@@ -77,6 +119,7 @@ export default class Register extends Component {
 		return (
 			<BackgroundImage source={require('../../assets/images/login-bg.png')}>
 				<View>
+					<ScrollView>
 					<Card wrapperStyle={{paddingLeft: 10}} title="Regístrate">
 						<Form
 							ref="form"
@@ -94,6 +137,7 @@ export default class Register extends Component {
 							iconColor="#fff"
 						/>
 					</Card>
+					</ScrollView>
 				</View>
 			</BackgroundImage>
 		)

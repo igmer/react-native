@@ -43,7 +43,7 @@ export default class DetailRestaurant extends Component {
 						restaurant={restaurant}
 					/>
 
-					<CommentForm restaurantId={restaurant.id} />
+					<CommentForm restaurantId={restaurant.id} navigation={this.props.navigation} />
 
 					<CommentList restaurantId={restaurant.id} />
 				</ScrollView>

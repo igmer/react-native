@@ -15,13 +15,14 @@ export default class Restaurants extends Component {
 			restaurants: [],
 			loaded: false,
 			restaurant_logo: require('../../../assets/images/worker.png'),
-			search: ''
+			search: '',
+			currentUser: {}
 		};
 	}
 
 	componentDidMount () {
 		const {search} = this.state;
-		
+
 		if ( ! search) {
 			this.refRestaurants = firebase.database().ref().child('restaurants')
 				.orderByChild('estado').equalTo(1);
@@ -84,7 +85,7 @@ export default class Restaurants extends Component {
 		this.setState({
 			search: search.charAt(0).toUpperCase() + search.slice(1)
 		});
-		
+
 		if (search.length >= 3) {
 			this._filterRestaurants(search);
 			setTimeout(() => {
@@ -92,7 +93,7 @@ export default class Restaurants extends Component {
 			}, 1000);
 		}
 	}
-	
+
 	resetSearch () {
 		this.setState({
 			search: ''
@@ -102,7 +103,7 @@ export default class Restaurants extends Component {
 				this._loadFirebaseRestaurants();
 			}, 1000);
 	}
-	
+
 	_filterRestaurants (search) {
 		this.refRestaurants = firebase.database().ref().child('restaurants')
 				.orderByChild('name')
@@ -122,7 +123,7 @@ export default class Restaurants extends Component {
 					platform="android"
 					showLoading
 					cancelIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-					placeholder='Busca algún restaurante!' 
+					placeholder='Buscar'
 					onChangeText={(text) => this.searchRestaurants(text)}
 					onClear={this.resetSearch.bind(this)}
 					value={this.state.search}
@@ -165,6 +166,7 @@ const styles = StyleSheet.create({
 	},
 	item: {
 		padding: 0,
+		height:70,
 		backgroundColor: 'rgba(206, 206, 206, 0.6)',
 	}
 });

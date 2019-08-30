@@ -14,6 +14,7 @@ export const Restaurant = t.struct({
 	capacity: t.Number,
 	description: t.String,
 	estado: t.maybe(t.Number),
+	user: t.maybe(t.String),
 
 });
 
@@ -59,6 +60,9 @@ export const options = {
 		estado:{
 			hidden:true
 
+		},
+		user:{
+			hidden:true
 		}
 	}
 };

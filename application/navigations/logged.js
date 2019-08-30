@@ -49,7 +49,7 @@ const restaurantsScreenStack = createStackNavigator(
 			screen: RestaurantsScreen,
 			navigationOptions: ({navigation}) => ({
 				...navigationOptions,
-				title: 'Restaurantes',
+				title: 'Proyectos',
 				headerLeft: leftIcon(navigation, 'bars')
 			})
 		},
@@ -64,7 +64,7 @@ const restaurantsScreenStack = createStackNavigator(
 		DetailRestaurant: {
 			screen: DetailRestaurantScreen,
 			navigationOptions: ({navigation}) => ({
-				title: 'Detalle del restaurante',
+				title: 'Detalle del Proyecto',
 				headerRight: rightIcon(navigation, 'home'),
 				headerLeft: leftIcon(navigation, 'bars'),
 			})

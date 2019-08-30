@@ -7,16 +7,24 @@ import {Card} from "react-native-elements";
 import {View} from "react-native";
 import * as firebase from 'firebase';
 import Toast from 'react-native-simple-toast';
+import { NavigationActions } from 'react-navigation';
 
 export default class CommentForm extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			comment: {
 				comment: '',
 				rating: 1
 			}
 		};
+	}
+	goHome () {
+		const navigateAction = NavigationActions.navigate({
+			routeName: 'ListRestaurants',
+		});
+		this.props.navigation.dispatch(navigateAction);
+
 	}
 
 	addComment () {
@@ -38,10 +46,11 @@ export default class CommentForm extends Component {
 						}
 					}
 				});
-				Toast.showWithGravity('Comentario publicado!', Toast.LONG, Toast.TOP);
+				Toast.showWithGravity('Presupuesto publicado!', Toast.LONG, Toast.TOP);
 			})
 		}
 	}
+
 
 	onChange (comment) {
 		this.setState({comment});
@@ -50,7 +59,7 @@ export default class CommentForm extends Component {
 	render () {
 		const {comment} = this.state;
 		return (
-			<Card title="Dános tu opinión">
+			<Card title="Envia tu presupuesto">
 				<View>
 					<Form
 						ref="form"
@@ -63,9 +72,17 @@ export default class CommentForm extends Component {
 
 				<AppButton
 					bgColor="rgba(255, 38, 74, 0.9)"
-					title="Publicar opinión"
+					title="Publicar Presupuesto"
 					action={this.addComment.bind(this)}
 					iconName="comments"
+					iconSize={30}
+					iconColor="#fff"
+				/>
+				<AppButton
+					bgColor="rgba(28, 25, 21, 0.7)"
+					title="Volver"
+					action={this.goHome.bind(this)}
+					iconName="arrow-left"
 					iconSize={30}
 					iconColor="#fff"
 				/>

@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7facd229-2d78-4778-bf2f-48d8462e6327" name="Default" comment="" />
+    <list default="true" id="7facd229-2d78-4778-bf2f-48d8462e6327" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/components/Comment/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/components/Comment/Comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/components/Comment/CommentEmpty.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/components/Comment/CommentEmpty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/components/Comment/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/components/Comment/CommentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/components/Comment/CommentList.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/components/Comment/CommentList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/components/Restaurant/Restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/components/Restaurant/Restaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/forms/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/forms/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/forms/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/forms/restaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/navigations/guest.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/navigations/guest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/navigations/logged.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/navigations/logged.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/screens/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/screens/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/screens/Restaurants/AddRestaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/screens/Restaurants/AddRestaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/screens/Restaurants/DetailRestaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/screens/Restaurants/DetailRestaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/screens/Restaurants/Restaurants.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/screens/Restaurants/Restaurants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,7 +41,22 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.expo-shared/assets.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -32,6 +68,9 @@
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -46,6 +85,7 @@
         <option value="$PROJECT_DIR$/application/forms/restaurant.js" />
         <option value="$PROJECT_DIR$/application/screens/Restaurants/AddRestaurant.js" />
         <option value="$PROJECT_DIR$/application/screens/Restaurants/Restaurants.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -65,10 +105,26 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="expo-firebase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expo-firebase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expo-firebase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expo-firebase" type="462c0819:PsiDirectoryNode" />
+              <item name=".expo-shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../app-firebase" />
@@ -122,6 +178,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1024" y="27" width="1024" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2052052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -319,6 +376,16 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.expo-shared/assets.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>

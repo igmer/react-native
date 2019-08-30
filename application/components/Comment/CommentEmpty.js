@@ -6,7 +6,7 @@ export default class CommentEmpty extends Component {
 		return (
 			<View style={styles.commentEmptyView}>
 				<Text style={styles.commentEmptyText}>
-					Sé el primero en opinar
+					Sé el primero en publicar
 				</Text>
 			</View>
 		)

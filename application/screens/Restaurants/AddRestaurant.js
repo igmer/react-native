@@ -18,9 +18,15 @@ export default class AddRestaurant extends Component {
 				address: '',
 				capacity: 0,
 				description: '',
-				estado:1
+				estado:1,
+				user: firebase.auth().currentUser.email
+
 			}
 		};
+	}
+	componentDidMount() {
+		let user = firebase.auth().currentUser.email;
+		console.log(user)
 	}
 
 	save () {

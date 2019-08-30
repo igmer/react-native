@@ -5,36 +5,31 @@ import sliderTemplate from './templates/slider';
 
 export const Comment = t.struct({
 	rating: t.Number,
-	comment: t.maybe(t.String)
+	comment: t.String
 });
 
 export const options = {
 	fields: {
 		rating: {
-			label: 'Puntuación',
-			help: '¿Qué puntuación le das del 1 al 5?',
-			template: sliderTemplate,
-			config: {
-				step: 1,
-				min: 1,
-				max: 5,
-			},
+			label: 'Presupuesto $ USD ',
+			help: '¿En cuanto calculas tu presupuesto?',
+
 		},
 		comment: {
-			label: 'Comentario',
-			placeholder: 'Comentario',
+			label: 'Comentarios',
+			placeholder: 'Agrega tus comentarios',
 			multiline: true,
 			stylesheet: {
 				...Form.stylesheet,
 				textbox: {
-					...Form.stylesheet.text,
+					...Form.stylesheet.textbox,
 					normal: {
 						...Form.stylesheet.textbox.normal,
-						height: 50
+						height: 150
 					},
 					error: {
 						...Form.stylesheet.textbox.error,
-						height: 50
+						height: 150
 					}
 				}
 			}

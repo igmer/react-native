@@ -57,7 +57,7 @@ export default class CommentList extends Component {
 
 		return (
 			<View style={styles.container}>
-				<Text style={styles.title}>Opiniones</Text>
+				<Text style={styles.title}>Otras Propuestas</Text>
 				<Divider style={styles.divider}/>
 				<Card>
 					<FlatList
